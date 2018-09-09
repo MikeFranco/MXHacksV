@@ -88,3 +88,15 @@ h1{
     background-color: rgba(128,128,128,0.7);
     visibility: hidden;
 }
+
+
+
+#guardar{
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    background-color: #4CAF50;
+}
+
+#guardar:hover {background-color: #46a049;}

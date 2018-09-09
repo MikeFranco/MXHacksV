@@ -35,7 +35,7 @@ btnSesion.addEventListener("click",function(){
   }).catch((error)=>{
     console.log(error);
   })
-  alert("Se ha iniciado sesion");
+  //alert("Se ha iniciado sesion");
   setTimeout(reg, 1500);
   
 });
@@ -45,32 +45,32 @@ firebase.auth().onAuthStateChanged(function(user){
   console.log(user);
   if(user){
     console.log("hay usuario");
-    showLogout();
+   // showLogout();
   }else{
     console.log("no hay usuario");
-    showLogin();
+    //showLogin();
   }
 });
 
 btnCerrar.addEventListener("click", ()=>{
   
   firebase.auth().signOut().then(()=>{
-    showLogin();
+    //showLogin();
     console.log("ya salí");
   }).catch(()=>{    
-    showLogout();
+    //showLogout();
   })
   gnlo();
-  alert("Se ha cerrado la sesion");
+  //alert("Se ha cerrado la sesion");
 })
 
-//ocultar logout
+//ocultar login
 const showLogout = () =>{
   btnSesion.style.display = "none";
   btnCerrar.style.display = "block";
   ////registro.style.display = "block";
 }
-//ocultar login
+//ocultar logout
 const showLogin = () =>{
   btnSesion.style.display = "block";
   btnCerrar.style.display = "none"

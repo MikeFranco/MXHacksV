@@ -18,7 +18,7 @@ const ref = firebase.database().ref("users");
 
 btnGuardar.addEventListener("click", ()=>{
   GenLoader();
-  setTimeout(reg, 4000);
+  setTimeout(reg, 2500);
 })
 
 
@@ -36,7 +36,7 @@ btnGuardar.addEventListener("click", ()=>{
   console.log(objeto);
 
   ref.push(objeto).then(()=>{
-    alert("Sus datos han cargado correctamente");
+   console.log("Sus datos han cargado correctamente");
   }).catch((error)=>{
     console.log(error);
   })
